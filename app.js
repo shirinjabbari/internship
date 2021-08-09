@@ -15,7 +15,7 @@
     //});
     
 //};
-infoBtn.addEventListener('click', createRequest);
+
 const infoBtn = document.getElementById('btn');
 const divElement = document.getElementById('persons-info');
 let stringOfInfo = "";
@@ -34,6 +34,7 @@ const renderHTML = (data) => {
       divElement.insertAdjacentHTML('beforeend',stringOfInfo);
   }   
 };
+infoBtn.addEventListener('click', createRequest);
 
 
  
