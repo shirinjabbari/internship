@@ -8,14 +8,29 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <table>
-        
-    </table>
     <header>
         <h1>post information</h1>
+        <input type="text" name="input-search" id="input-search " placeholder="search">
+        <button id="search-btn">Refresh Reset Query</button>
+        <label for="input-search"></label>
         <button id="btn">press to show information</button>
     </header>
-    <div id="persons-info"></div>
+    <div id="persons-info">
+        <table class="modal-table" id="text-table">
+            <thead>
+                <tr>
+                   <!--<th>user id</th>-->
+                    <th>id</th>
+                    <th>topic</th>
+                    <th>text</th>
+                </tr>
+            </thead>
+            <tbody  id="data">
+               
+            </tbody>
+        
+        </table>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
