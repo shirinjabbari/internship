@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posts information</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,22 +16,21 @@
         <label for="input-search"></label>
         <button id="btn">press to show information</button>
     </header>
-    <div id="persons-info">
-        <table class="modal-table" id="text-table">
-            <thead>
-                <tr>
+        <input type="text" id="myInputId" onkeyup="searchId()" placeholder="Search for id..">
+        <input type="text" id="myInputTopic" onkeyup="searchTopic()" placeholder="search for topics..">
+        <input type="text" id="myInputBody" onkeyup="searchText()" placeholder="search for text..">
+        <table id="myTable">
+                <tr class="header">
                    <!--<th>user id</th>-->
                     <th>id</th>
                     <th>topic</th>
                     <th>text</th>
                 </tr>
-            </thead>
-            <tbody  id="data">
-               
-            </tbody>
+                <tbody id="data">
+
+                </tbody>
         
         </table>
-    </div>
-    <script src="app.js"></script>
+    
 </body>
 </html>
