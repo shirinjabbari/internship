@@ -14,23 +14,34 @@
         <input type="text" name="input-search" id="input-search " placeholder="search">
         <button id="search-btn">Refresh Reset Query</button>
         <label for="input-search"></label>
-        <button id="btn">press to show information</button>
+        
     </header>
+    <h3>
         <input type="text" id="myInputId" onkeyup="searchId()" placeholder="Search for id..">
         <input type="text" id="myInputTopic" onkeyup="searchTopic()" placeholder="search for topics..">
         <input type="text" id="myInputBody" onkeyup="searchText()" placeholder="search for text..">
+        <select class="rowsPage" id="rowsPage">
+            <option value="0" >rows per page</option>
+            <option value="10" >10</option>
+            <option value="20" >20</option>
+            <option value="50">50</option>
+        </select>
+    </h3>
+
         <table id="myTable">
                 <tr class="header">
-                   <!--<th>user id</th>-->
                     <th>id</th>
                     <th>topic</th>
                     <th>text</th>
                 </tr>
                 <tbody id="data">
 
+
                 </tbody>
+
         
         </table>
+        <divc  class="pagenumbers" id="pagination"></div>
     
 </body>
 </html>

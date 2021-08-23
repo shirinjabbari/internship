@@ -1,3 +1,35 @@
+.pagenumbers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.pagenumbers button{
+  font: inherit;
+  padding: 0.5rem 1rem;
+  width: 50px;
+  height: 50px;
+  appearance: none;
+  border: 1px solid #7322f6;
+  outline: none;
+  cursor: pointer;
+  background:#7322f6;
+  margin: 5px;
+  transition: 0.4s;
+  color:rgb(0, 0, 0);
+  font-size: 18px;
+  box-shadow: 0px 0px 4px rgba(0,0, 0, 0.2);
+  border-radius: 6px;
+}
+.pagenumbers button:hover{
+  background-color: #f3cc4b;
+  border-color: #f3cc4b;
+}
+.pagenumbers button:active{
+  background-color: #995200;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,7 +37,6 @@
 html {
   font-family: sans-serif;
 }
-
 body {
   margin: 0;
 }
@@ -23,13 +54,11 @@ header {
   padding: 0 2.5rem;
   background: #9e007c;
 }
-
 header h1 {
   margin: 0;
   color:white;
   font-size: 1.5rem;
 }
-
 header button {
   font: inherit;
   padding: 0.5rem 1rem;
@@ -41,37 +70,42 @@ header button {
   cursor: pointer;
 }
 #myInputId , #myInputTopic, #myInputBody {
-  width: 30%; 
+  width: 25%; 
   font-size: 16px; 
   padding: 12px 20px 12px 40px; 
   border: 1px solid #ddd;
   margin-bottom: 12px; 
 }
+#rowsPage{
+  height: 43px;
+  width: 20%;
+}
 header input{
   width: 20%; 
-  font-size: 16px; 
-  padding: 12px 20px 12px 40px; 
+  font: inherit; 
+  padding: 0.5rem 1rem; 
   border: 1px solid #ddd; 
-  margin-bottom: 12px; 
+  border-radius: 6px;
+ 
 }
-
 #myTable {
   border-collapse: collapse;
   width: 100%; 
   border: 1px solid #ddd; 
   font-size: 16px; 
 }
-
-#myTable th, #myTable td {
+#myTable th {
   text-align: left; 
   padding: 12px;
+  color: white;
 }
-
+#myTable td{
+  text-align: left; 
+  padding: 12px; 
+}
 #myTable tr {
- 
   border-bottom: 1px solid #ddd;
 }
-
 #myTable tr.header {
   background-color:#9e007c;
 }
@@ -81,60 +115,33 @@ header input{
 #myTable tr:last-of-type{
   border-bottom: 15px #9e007c;
 }
-
 header button:hover,
 header button:active {
   background: #f3cc4b;
   border-color: #f3cc4b;
   color: #995200;
 }
-
 label {
   font-weight: bold;
   margin: 0.5rem 0;
   color: #464646;
 }
-
-
-.btn {
-  font: inherit;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #00329e;
-  background: #00329e;
-  color: white;
-  border-radius: 6px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
-  cursor: pointer;
-  margin: 0 0.5rem;
-}
 input {
-  
-
   font: inherit;
   border: 1px solid #ccc;
   padding: 0.4rem 0.2rem;
   color: #383838;
 }
-
 input:focus {
   outline: none;
   background: #fff1c4;
 }
-
-.btn:hover,
-.btn:active {
-  background: #f67722;
-  border-color: #f67722;
-}
-
-
 @media (min-width: 768px) {
   .modal {
     width: 40rem;
     left: calc(50% - 20rem);
   }
 }
-
 @keyframes fade-slide-in {
   from {
     transform: translateY(-5rem);
